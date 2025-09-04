@@ -18,7 +18,7 @@
             background-color: #F0F4F8;
         }
         .bg-secondary {
-            background-color: #E2E8F0;
+            background-color: #E2E8E0; /* Ligeramente más oscuro que el primario */
         }
         .text-primary {
             color: #2D3748;
@@ -94,6 +94,24 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Carrusel de fondo */
+        .hero-carousel-track {
+            display: flex;
+            height: 100%;
+            transition: transform 1s ease-in-out;
+        }
+        .hero-carousel-slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .hero-carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5; /* Opacidad para que el texto sea más legible */
+        }
     </style>
 </head>
 <body class="bg-primary text-primary">
@@ -101,7 +119,9 @@
     <!-- Header y Navegación -->
     <header class="bg-primary sticky top-0 z-50 shadow-md">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-primary">GenyxFarma</a>
+            <a href="#" class="text-2xl font-bold text-primary">
+                <img src="https://www.genyxfarma.com/wp-content/uploads/2017/12/logo4.png" alt="GenyxFarma Logo" class="h-10 w-auto">
+            </a>
             <div class="hidden md:flex space-x-6">
                 <a href="#about" class="text-primary hover:text-accent transition-colors duration-300">Nosotros</a>
                 <a href="#solutions" class="text-primary hover:text-accent transition-colors duration-300">Soluciones</a>
@@ -123,9 +143,23 @@
     </header>
 
     <main>
-        <!-- Sección de Héroe -->
-        <section class="relative hero-gradient text-center py-20 md:py-32">
-            <div class="container mx-auto px-4">
+        <!-- Sección de Héroe con Carrusel de Fondo -->
+        <section class="relative bg-primary text-center py-20 md:py-32 overflow-hidden">
+            <!-- Carrusel de fondo -->
+            <div id="hero-carousel" class="absolute inset-0 z-0">
+                <div class="hero-carousel-track h-full w-full">
+                    <!-- Imagen 1 del Carrusel -->
+                    <div class="hero-carousel-slide flex-shrink-0">
+                        <img src="https://app.marketingnetworkc.com/Gemini_Generated_Image_hpmphqhpmphqhpmp.png" alt="Tecnología de laboratorio" class="w-full h-full object-cover opacity-50">
+                    </div>
+                    <!-- Imagen 2 del Carrusel -->
+                    <div class="hero-carousel-slide flex-shrink-0">
+                        <img src="https://app.marketingnetworkc.com/Gemini_Generated_Image_f1nrowf1nrowf1nr.png" alt="Proceso de fabricación farmacéutica" class="w-full h-full object-cover opacity-50">
+                    </div>
+                </div>
+            </div>
+            <!-- Contenido principal encima del carrusel -->
+            <div class="relative z-10 container mx-auto px-4">
                 <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-tight">
                     Innovación para un Futuro Saludable
                 </h1>
@@ -138,45 +172,20 @@
             </div>
         </section>
 
-        <!-- Sección Carrusel -->
+        <!-- Sección de Tecnología -->
         <section id="technology" class="py-16 md:py-24 bg-secondary fade-in-section">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-2xl md:text-4xl font-bold text-primary mb-12">Nuestra Tecnología</h2>
-                <div class="carousel-container relative max-w-4xl mx-auto">
-                    <div class="carousel-track">
-                        <!-- Imagen 1 del Carrusel -->
-                        <div class="carousel-slide flex-shrink-0">
-                            <img src="https://placehold.co/900x600/3B82F6/ffffff?text=Laboratorio+de+Investigación" alt="Laboratorio de investigación farmacéutica" class="w-full h-auto rounded-lg shadow-xl">
-                        </div>
-                        <!-- Imagen 2 del Carrusel -->
-                        <div class="carousel-slide flex-shrink-0">
-                            <img src="https://placehold.co/900x600/3B82F6/ffffff?text=Equipo+de+Control+de+Calidad" alt="Equipo de control de calidad farmacéutico" class="w-full h-auto rounded-lg shadow-xl">
-                        </div>
-                        <!-- Imagen 3 del Carrusel -->
-                        <div class="carousel-slide flex-shrink-0">
-                            <img src="https://placehold.co/900x600/3B82F6/ffffff?text=Desarrollo+de+Fármacos" alt="Desarrollo de nuevos fármacos" class="w-full h-auto rounded-lg shadow-xl">
-                        </div>
-                    </div>
-
-                    <!-- Botones de Navegación del Carrusel -->
-                    <button id="prevBtn" class="carousel-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                    <button id="nextBtn" class="carousel-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
-                </div>
+                <p class="text-primary opacity-80">
+                    Trabajamos con lo último en tecnología para desarrollar productos de la más alta calidad.
+                </p>
             </div>
         </section>
 
-        <!-- Sección Nosotros -->
+        <!-- Sección Sobre Nosotros -->
         <section id="about" class="py-16 md:py-24 bg-primary fade-in-section">
             <div class="container mx-auto px-4">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="grid md:grid-cols-1 gap-12 items-center text-center">
                     <div>
                         <h2 class="text-2xl md:text-4xl font-bold text-primary mb-4">Sobre Nosotros</h2>
                         <p class="text-primary opacity-80 leading-relaxed mb-4">
@@ -185,9 +194,6 @@
                         <p class="text-primary opacity-80 leading-relaxed">
                             Fundada en 2010, nuestra empresa ha crecido basándose en la excelencia científica, la integridad y una pasión inquebrantable por la salud. Trabajamos incansablemente para innovar y superar los límites de la medicina moderna.
                         </p>
-                    </div>
-                    <div>
-                         <img src="https://placehold.co/600x400/3B82F6/ffffff?text=Imagen+Corporativa" alt="Oficinas de GenyxFarma" class="rounded-lg shadow-xl w-full h-auto">
                     </div>
                 </div>
             </div>
@@ -294,40 +300,22 @@
                 behavior: 'smooth'
             });
         });
-
-        // Lógica del carrusel
-        const carouselTrack = document.querySelector('.carousel-track');
-        const slides = Array.from(carouselTrack.children);
-        const nextBtn = document.getElementById('nextBtn');
-        const prevBtn = document.getElementById('prevBtn');
         
-        let currentSlide = 0;
+        // Lógica del carrusel de fondo automático
+        const heroCarouselTrack = document.querySelector('.hero-carousel-track');
+        const heroSlides = Array.from(heroCarouselTrack.children);
+        let heroCurrentSlide = 0;
 
-        // Función para mover el carrusel
-        const moveToSlide = (track, targetSlide) => {
-            const targetIndex = slides.indexOf(targetSlide);
-            const offset = targetSlide.offsetLeft;
-            track.style.transform = `translateX(-${offset}px)`;
-            currentSlide = targetIndex;
+        const moveHeroCarousel = () => {
+            heroCurrentSlide++;
+            if (heroCurrentSlide >= heroSlides.length) {
+                heroCurrentSlide = 0;
+            }
+            const offset = heroSlides[heroCurrentSlide].offsetLeft;
+            heroCarouselTrack.style.transform = `translateX(-${offset}px)`;
         };
 
-        // Escuchar clics en el botón Siguiente
-        nextBtn.addEventListener('click', () => {
-            let nextSlideIndex = currentSlide + 1;
-            if (nextSlideIndex >= slides.length) {
-                nextSlideIndex = 0; // Vuelve al inicio
-            }
-            moveToSlide(carouselTrack, slides[nextSlideIndex]);
-        });
-
-        // Escuchar clics en el botón Anterior
-        prevBtn.addEventListener('click', () => {
-            let prevSlideIndex = currentSlide - 1;
-            if (prevSlideIndex < 0) {
-                prevSlideIndex = slides.length - 1; // Vuelve al final
-            }
-            moveToSlide(carouselTrack, slides[prevSlideIndex]);
-        });
+        setInterval(moveHeroCarousel, 5000); // Cambia la imagen cada 5 segundos
         
         // Lógica de animación al hacer scroll (Intersection Observer)
         const fadeInSections = document.querySelectorAll('.fade-in-section');
@@ -353,3 +341,4 @@
     </script>
 </body>
 </html>
+
