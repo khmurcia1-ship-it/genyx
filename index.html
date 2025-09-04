@@ -144,7 +144,6 @@
 
     <main>
         <!-- Sección de Héroe con Carrusel de Fondo -->
-        <!-- Ajuste de la altura de la sección para una mejor visualización en móviles -->
         <section class="relative bg-primary text-center py-20 md:py-32 overflow-hidden h-[400px] md:h-[60vh] lg:h-[70vh] flex items-center justify-center">
             <!-- Carrusel de fondo -->
             <div id="hero-carousel" class="absolute inset-0 z-0">
@@ -177,24 +176,34 @@
         <section id="technology" class="py-16 md:py-24 bg-secondary fade-in-section">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-2xl md:text-4xl font-bold text-primary mb-12">Nuestra Tecnología</h2>
-                <p class="text-primary opacity-80">
-                    Trabajamos con lo último en tecnología para desarrollar productos de la más alta calidad.
-                </p>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-primary opacity-80 text-left">
+                            Trabajamos con lo último en tecnología para desarrollar productos de la más alta calidad.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="https://images.pexels.com/photos/5698375/pexels-photo-5698375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Técnico de laboratorio trabajando en una línea de producción" class="w-full h-auto rounded-lg shadow-md">
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Sección Sobre Nosotros -->
         <section id="about" class="py-16 md:py-24 bg-primary fade-in-section">
             <div class="container mx-auto px-4">
-                <div class="grid md:grid-cols-1 gap-12 items-center text-center">
+                <div class="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
                     <div>
                         <h2 class="text-2xl md:text-4xl font-bold text-primary mb-4">Sobre Nosotros</h2>
                         <p class="text-primary opacity-80 leading-relaxed mb-4">
-                            GenyxFarma es un líder en la industria farmacéutica, comprometido con la investigación y el desarrollo de medicamentos de vanguardia. Nuestra misión es simple: proporcionar productos de alta calidad que sean accesibles y que contribuyan al bienestar de la sociedad.
+                            GenyxFarma es un líder en la industria farmacéutica, comprometido con el desarrollo de medicamentos de vanguardia. Nuestra misión es simple: proporcionar productos de alta calidad que sean accesibles y que contribuyan al bienestar de la sociedad.
                         </p>
                         <p class="text-primary opacity-80 leading-relaxed">
-                            Fundada en 2010, nuestra empresa ha crecido basándose en la excelencia científica, la integridad y una pasión inquebrantable por la salud. Trabajamos incansablemente para innovar y superar los límites de la medicina moderna.
+                            Fundada en 2010, nuestra empresa ha crecido basándose en la excelencia científica, la integridad y una pasión inquebrantable por la salud.
                         </p>
+                    </div>
+                    <div>
+                         <img src="https://images.pexels.com/photos/4030773/pexels-photo-4030773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Un equipo de trabajadores en un laboratorio" class="w-full h-auto rounded-lg shadow-md">
                     </div>
                 </div>
             </div>
@@ -204,7 +213,8 @@
         <section id="solutions" class="py-16 md:py-24 bg-secondary fade-in-section">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-2xl md:text-4xl font-bold text-primary mb-12">Nuestras Soluciones</h2>
-                <div class="grid md:grid-cols-3 gap-8">
+                 <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Trabajadores revisando cajas en una planta de producción" class="w-full h-auto rounded-lg shadow-md mb-8">
+                <div class="grid md:grid-cols-2 gap-8">
                     <!-- Tarjeta 1 -->
                     <div class="bg-primary p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-accent mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -222,17 +232,175 @@
                         </svg>
                         <h3 class="text-xl font-semibold text-primary mb-2">Medicamentos de Avanzada</h3>
                         <p class="text-primary opacity-80">
-                            Ofrecemos medicamentos de alta calidad para complementar la dieta y mejorar el bienestar general.
+                            Ofrecemos medicamentos de alta calidad para la prevención y el tratamiento de diversas enfermedades.
                         </p>
                     </div>
-                    <!-- Tarjeta 3 -->
-                    <div class="bg-primary p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-accent mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <h3 class="text-xl font-semibold text-primary mb-2">Investigación y Desarrollo</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Fundación y Crecimiento -->
+        <section id="foundation" class="py-16 md:py-24 bg-primary fade-in-section">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-4xl font-bold text-primary mb-12">Fundación y Crecimiento</h2>
+                <img src="https://images.pexels.com/photos/3862272/pexels-photo-3862272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Línea de producción farmacéutica con trabajadores" class="w-full h-auto rounded-lg shadow-md mb-8">
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Fundación de la Empresa</h3>
                         <p class="text-primary opacity-80">
-                            Nuestra continua inversión en I+D nos permite estar a la vanguardia de la innovación médica.
+                            Nuestra empresa fue establecida hace 12 años con el propósito de satisfacer necesidades específicas de los pacientes ofreciendo opciones farmacéuticas DIFERENCIALES que optimizan los tratamientos y mejoran la salud y el bienestar de la comunidad.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Crecimiento Sostenido</h3>
+                        <p class="text-primary opacity-80">
+                            Con el tiempo, hemos experimentado un crecimiento sostenido, expandiendo nuestros productos en los canales: Comercial & Institucional.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Impacto en la Comunidad</h3>
+                        <p class="text-primary opacity-80">
+                            Nuestro compromiso con la calidad de vida de los pacientes ha llevado a un impacto positivo en el médico prescriptor, que puede ofrecerle bienestar y calidad de vida a sus pacientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Misión y Valores -->
+        <section id="mission" class="py-16 md:py-24 bg-secondary fade-in-section">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-4xl font-bold text-primary mb-12">Misión y Valores</h2>
+                <img src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Un médico hablando seriamente con un paciente" class="w-full h-auto rounded-lg shadow-md mb-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Misión de la Empresa</h3>
+                        <p class="text-primary opacity-80">
+                            Nuestra misión es ofrecer productos farmacéuticos que sean seguros y eficaces, asegurando la confianza del medico prescriptor que busca la salud y bienestar de sus pacientes.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Valores de Integridad</h3>
+                        <p class="text-primary opacity-80">
+                            La integridad es fundamental en nuestra empresa; actuamos de manera ética y hacemos las cosas bien desde la primera vez en todas nuestras operaciones.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Innovación</h3>
+                        <p class="text-primary opacity-80">
+                            Nos comprometemos a la innovación constante para cubrir necesidades de segmentos específicos con nuestros productos, adaptándonos a las necesidades del medico y de su paciente.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Servicio al Cliente</h3>
+                        <p class="text-primary opacity-80">
+                            El compromiso con el servicio al cliente es esencial, garantizando que siempre estemos disponibles para atender sus necesidades en el menos tiempo posible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Productos -->
+        <section id="products" class="py-16 md:py-24 bg-primary fade-in-section">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-4xl font-bold text-primary mb-12">Productos</h2>
+                <img src="https://images.pexels.com/photos/4198108/pexels-photo-4198108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Trabajador de una farmacéutica revisando un lote de píldoras" class="w-full h-auto rounded-lg shadow-md mb-8">
+                <div class="grid md:grid-cols-2 gap-8 text-left">
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Tratamientos para diversas condiciones</h3>
+                        <p class="text-primary opacity-80">
+                            Nuestros productos se enfocan en tratamientos para una variedad de condiciones de salud, relacionadas con enfermedades crónicas, pero también son alternativa segura para procesos agudos.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Medicamentos esenciales</h3>
+                        <p class="text-primary opacity-80">
+                            Incluimos medicamentos esenciales que son fundamentales para el tratamiento de enfermedades comunes y crónicas, en la practica medica diaria.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Servicios de Distribución y Logística -->
+        <section id="services" class="py-16 md:py-24 bg-secondary fade-in-section">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-4xl font-bold text-primary mb-12">Servicios de Distribución y Logística</h2>
+                 <img src="https://images.pexels.com/photos/4482928/pexels-photo-4482928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Un técnico de almacén operando un montacargas" class="w-full h-auto rounded-lg shadow-md mb-8">
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Sistema de Distribución Eficiente</h3>
+                        <p class="text-primary opacity-80">
+                            Nuestro sistema de distribución asegurar entregas puntuales y efectivas de productos a nuestros clientes.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Adaptabilidad Logística</h3>
+                        <p class="text-primary opacity-80">
+                            Nuestra logística se adapta a las necesidades específicas de distribuidores y cadenas de droguerías, optimizando el proceso de entrega.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Entrega Oportuna</h3>
+                        <p class="text-primary opacity-80">
+                            Garantizamos que nuestros productos llegan a los clientes en el tiempo esperado, pensando en la satisfacción de cada cliente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Distribución -->
+        <section id="distribution" class="py-16 md:py-24 bg-primary fade-in-section">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-4xl font-bold text-primary mb-12">Distribución</h2>
+                <img src="https://images.pexels.com/photos/7176465/pexels-photo-7176465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Farmacéutico entregando medicamentos a un cliente" class="w-full h-auto rounded-lg shadow-md mb-8">
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Colaboramos con cadenas de droguerías</h3>
+                        <p class="text-primary opacity-80">
+                            Colaboramos con cadenas de droguerías para mejorar la distribución de nuestros productos, asegurando que lleguen eficientemente a los puntos de venta.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Maximización de Visibilidad</h3>
+                        <p class="text-primary opacity-80">
+                            Nuestra colaboración es clave para incrementar la visibilidad de nuestros productos en el mercado, facilitando su acceso a los consumidores.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Atención al Cliente y al Consumidor</h3>
+                        <p class="text-primary opacity-80">
+                            Programa de Farmacovigilancia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Conclusión -->
+        <section id="conclusion" class="py-16 md:py-24 bg-secondary fade-in-section">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-4xl font-bold text-primary mb-12">Conclusión</h2>
+                <img src="https://images.pexels.com/photos/3845946/pexels-photo-3845946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Grupo de profesionales médicos con batas de laboratorio" class="w-full h-auto rounded-lg shadow-md mb-8">
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Agradecimiento</h3>
+                        <p class="text-primary opacity-80">
+                            Agradecemos sinceramente su tiempo y atención en esta presentación, lo que demuestra su interés en nuestra causa.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Oportunidades Futuras</h3>
+                        <p class="text-primary opacity-80">
+                            Estamos emocionados por las oportunidades que se presentan y cómo podemos trabajar juntos para aprovecharlas.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md hover-effect transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Impacto Positivo</h3>
+                        <p class="text-primary opacity-80">
+                            Nuestra meta es lograr un impacto positivo en la salud y bienestar de la comunidad a través de la colaboración.
                         </p>
                     </div>
                 </div>
